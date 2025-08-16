@@ -1,4 +1,4 @@
-# Trafik
+# Trafik - Mock smarter, debug faster.
 
 A Chrome extension that intercepts and overrides network requests, making it easy to mock responses and debug APIs in real time.
 
