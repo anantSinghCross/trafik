@@ -1,33 +1,41 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Trafik
+
+A Chrome extension that intercepts and overrides network requests, making it easy to mock responses and debug APIs in real time.
+
+## What it does
+
+Trafik allows developers to:
+- Intercept network requests in the browser
+- Override responses with custom data
+- Mock API endpoints for testing and development
+- Debug network issues in real-time
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. Build the extension: `npm run build`
+4. Load the extension in Chrome:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked" and select the `dist` folder
 
-```bash
-pnpm dev
-# or
-npm run dev
+## Development
+
+- `npm run dev` - Start development mode
+- `npm run build` - Build for production
+- `npm run watch` - Watch for changes
+
+## Project Structure
+
+```
+trafik/
+├── assets/          # Extension assets
+├── popup.tsx        # Extension popup UI
+├── package.json     # Dependencies and scripts
+└── tailwind.config.js # Tailwind CSS configuration
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+## License
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+MIT
